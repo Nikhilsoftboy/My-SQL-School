@@ -1,0 +1,41 @@
+create database emp2;
+use emp2;
+create table emp2
+    -> (
+    -> E_Code numeric(10),
+    -> E_Name varchar(20),
+    -> Sal numeric(10)
+    -> );
+insert into emp2
+    -> values('101','A','40000');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into emp2
+    -> values('102','B','20000');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into emp2
+    -> values('103','C','50000');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> desc emp2;
++--------+---------------+------+-----+---------+-------+
+| Field  | Type          | Null | Key | Default | Extra |
++--------+---------------+------+-----+---------+-------+
+| E_Code | decimal(10,0) | YES  |     | NULL    |       |
+| E_Name | varchar(20)   | YES  |     | NULL    |       |
+| Sal    | decimal(10,0) | YES  |     | NULL    |       |
++--------+---------------+------+-----+---------+-------+
+
+mysql> select * from emp2;
++--------+--------+-------+
+| E_Code | E_Name | Sal   |
++--------+--------+-------+
+|    101 | A      | 40000 |
+|    102 | B      | 20000 |
+|    103 | C      | 50000 |
++--------+--------+-------+
+3 rows in set (0.00 sec)
+
+
+
